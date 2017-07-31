@@ -1,0 +1,16 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+//setups
+@import "normalize";
+@import "layout";
+@import "fonts";
+
+
+@import "sections/main";
+@import "sections/best";
+
+@import "sections/reviews";
