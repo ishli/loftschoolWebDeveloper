@@ -1,0 +1,157 @@
+.main {
+	background: url(../img/background/main-bg.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header__container {
+	position: static;
+}
+
+.header {
+	padding-top: 12px;
+}
+
+.header__logo {
+	float: left;
+    width: 32%;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.header__menu {
+	float: left;
+    width: 68%;
+    padding-top: 16px;
+}
+
+.nav {
+	width: 83%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav__list {
+	width: 100%;
+}
+
+.nav__item {
+	white-space: nowrap;
+    margin-right: 15px;
+    display: block;
+    float: left;
+     &:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+    margin-left: 15px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:last-child:after {
+    content: '';
+    display: none;
+  }
+}
+
+.nav__link {
+	display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-family: 'ubuntumedium';
+}
+
+.order-link {
+	width: 15%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 9px 0;
+    margin-left: 2%;
+}
+
+.main__container {
+	position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}
+
+.main__left {
+	float: left;
+    width: 50%;
+}
+
+.main__img {
+	display: inline-block;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.main__right {
+	float: left;
+    width: 50%;
+    padding-top: 115px;
+}
+
+.main__right .section__title {
+	margin-bottom: 12px;
+}
+
+.main__desc {
+	font-size: 65px;
+    color: white;
+    font-family: 'lifehackmedium';
+    text-transform: lowercase;
+    line-height: 1em;
+}
+
+.down-arrow {
+	display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -15px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.down-arrow__icon-wrapper {
+	display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.down-arrow__icon {
+	fill: #fff;
+    display: block;
+}
+
+.down-arrow svg {
+	width: 30px;
+    height: 30px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    position: relative;
+    top: 0;
+}

@@ -1,0 +1,176 @@
+$container-width: 940px;
+$black: #2f3234;
+$yellow: #f9b43b;
+$orange: #e45028;
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.42;
+	font-family: 'ubuntulight', Helvetica, sans-serif;
+	color: $black;
+	-webkit-font-smoothing: antialiaced;
+}
+
+.container {
+	margin: 0 auto;
+	width: $container-width;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	min-width: $container-width + 20px;
+}
+
+.maincontent {
+	height: 100%;
+}
+
+.section {
+	height: 100%;
+	height: 100vh;
+	min-height: 650px;
+}
+
+
+.section__title {
+	font-size: 72px;
+    font-family: 'gagalinregular';
+    color: $yellow;
+}
+
+.btn {
+	display: inline-block;
+    vertical-align: top;
+    background: $orange;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 9px 16px;
+    font-family: 'ubuntumedium';
+    transition: background .3s;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: normal;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+footer {
+	min-width: $container-width + 20px;	
+	position: relative;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.nav__list::before, 
+.menu-acco::before, 
+.order__form::before, 
+.form-row::before, 
+.reviews__list::before, 
+.team-acco__content::before, 
+.nav__list::after, 
+.menu-acco::after, 
+.order__form::after, 
+.form-row::after, 
+.reviews__list::after, 
+.team-acco__content::after {
+	content: "";
+	display: table;
+}
+
+.nav__list::after, 
+.menu-acco::after, 
+.order__form::after, 
+.form-row::after, 
+.reviews__list::after, 
+.team-acco__content::after {
+	clear: both;
+}
+
+.fixed-menu {
+	position: fixed;
+    top: 90px;
+    right: 40px;
+}
+
+.fixed-menu__item {
+	margin-bottom: 5px;
+}
+
+.fixed-menu__link {
+	width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+    &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  &:before {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: .3s;
+  }
+
+  &:after {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+  }
+
+  &:hover:before {
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+  }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
