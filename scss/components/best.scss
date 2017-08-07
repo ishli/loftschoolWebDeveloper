@@ -1,0 +1,30 @@
+.best {
+    background: url(../img/background/best.jpg) 50% no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.best__list {
+    font-size: 14px;
+}
+
+.best__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    padding: 0 10px;
+}
+
+.best__icon {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.best__title {
+    font-size: 24px;
+    font-family: 'lifehackmedium';
+    color: $black;
+    margin-bottom: 20px;
+}

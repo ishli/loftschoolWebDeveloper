@@ -1,0 +1,44 @@
+.fixed-menu {
+    position: fixed;
+    top: 90px;
+    right: 40px;
+}
+
+.fixed-menu__item {
+    margin-bottom: 5px;
+}
+
+.fixed-menu__link {
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+    &:before {
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        opacity: 0;
+        transition: .3s;
+    }
+    &:after {
+        width: 6px;
+        height: 6px;
+        background-color: #ffffff;
+    }
+    &:hover:before {
+        width: 14px;
+        height: 14px;
+        opacity: 1;
+    }
+}
