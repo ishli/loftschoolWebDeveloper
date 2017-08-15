@@ -1,0 +1,33 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+$white:#fff;
+$darkGrey: #2f3234;
+//resolutions
+$desktop:1200px;
+$laptop:992px;
+$tablets:768px;
+$phones:480px;
+//normalize
+@import "_misc/normalize";
+// setups
+@import "_misc/mixins";
+@import "_misc/media";
+@import "_misc/fonts";
+@import "_misc/layout";
+//common
+@import "blocks/common/btn";
+@import "blocks/common/section-title";
+@import "blocks/common/fixed-menu";
+// blocks
+@import "blocks/hero";
+@import "blocks/best";
+@import "blocks/team";
+@import "blocks/reviews";
+@import "blocks/menu";
+@import "blocks/burgers";
+@import "blocks/order";
+@import "blocks/map";
+@import "blocks/footer";
