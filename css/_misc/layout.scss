@@ -81,6 +81,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     @include tablets {
-        height: rem(830px);
+        // height: 125vh;
     }
 }
