@@ -8,13 +8,14 @@
     display: inline-flex;
     @include ubuntu($style: medium);
     font-size: rem(13px);
+    
     &:hover {
         background-color: $red;
     }
-    &__grey {
-        background-color: $black;
-        &:hover {
-            background-color: #1f2122;
-        }
-    }
+    // &__grey {
+    //     background-color: $black;
+    //     &:hover {
+    //         background-color: #1f2122;
+    //     }
+    // }
 }

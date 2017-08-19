@@ -514,11 +514,7 @@ footer {
   font-weight: 500;
   font-size: 0.8125rem; }
   .btn:hover {
-    background-color: #e35028; }
-  .btn__grey {
-    background-color: #2f3234; }
-    .btn__grey:hover {
-      background-color: #1f2122; }
+    background-color: #cc3333; }
 
 .sectiontitle {
   font-size: 4.5rem;
@@ -1378,7 +1374,7 @@ ul.fixed-menu__list {
           flex-direction: column;
   position: relative; }
   .burgers-box:hover {
-    background-color: #e35028; }
+    background-color: #cc3333; }
     .burgers-box:hover + .burgers-box__hover {
       display: block;
       position: absolute;
@@ -1493,13 +1489,13 @@ ul.fixed-menu__list {
   font-weight: 300; }
 
 .cost__price {
-  color: #e35028;
+  color: #cc3333;
   font-size: 4.5rem;
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   margin-right: 0.625rem; }
 
 .cost__mesure {
-  color: #e35028;
+  color: #cc3333;
   font-size: 1.875rem;
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   margin-right: 1.875rem;
@@ -1667,7 +1663,7 @@ ul.fixed-menu__list {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    background-color: #e35028;
+    background-color: #cc3333;
     -webkit-transition: .3s;
     transition: .3s; }
 
