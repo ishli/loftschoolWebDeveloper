@@ -56,7 +56,8 @@
 }
 
 .menu-acco__content {
-    height: 0;
+    transition: width 0.5s;
+    width: 0;
     overflow: hidden;
     background-color: rgba(#2f3234, .93);
     display: none;

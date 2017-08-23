@@ -1257,7 +1257,9 @@ ul.fixed-menu__list {
     color: #f9b43b; }
 
 .menu-acco__content {
-  height: 0;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  width: 0;
   overflow: hidden;
   background-color: rgba(47, 50, 52, 0.93);
   display: none;

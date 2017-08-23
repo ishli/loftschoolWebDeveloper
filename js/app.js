@@ -55,7 +55,7 @@ const showYandexMap = function () {
 
         myMap.behaviors
             .disable('scrollZoom')
-            .disable('drag')
+            .disable('drag');
     };
 
     ymaps.ready(init);
@@ -71,29 +71,57 @@ const showOwlCarousel = function () {
     });
 };
 
-const initTeam = function(){
+const initTeam = function () {
     $('.team-acco__title').on('click', function (e) {
         const elem = $(e.target),
-        item = elem.closest('.team-acco__item'),
-        content = item.find('.team-acco__wrapper'),
-        openHeight = item.find('.team-acco__content').outerHeight( true ),
-        otherItems = item.siblings(),
-        otherItemsContent = otherItems.find('.team-acco__wrapper');
+            item = elem.closest('.team-acco__item'),
+            content = item.find('.team-acco__wrapper'),
+            openHeight = item.find('.team-acco__content').outerHeight(true),
+            otherItems = item.siblings(),
+            otherItemsContent = otherItems.find('.team-acco__wrapper');
 
         if (item.hasClass('active')) {
             item.removeClass('active'),
-            content.css('height', '0')
+                content.css('height', '0')
         } else {
             otherItems.removeClass('active'),
-            item.addClass('active'),
-            otherItemsContent.css('height', '0'),
-            content.css('height', openHeight)
+                item.addClass('active'),
+                otherItemsContent.css('height', '0'),
+                content.css('height', openHeight)
         }
-    })
+    });
 };
+
+const initMenu = function () {
+    $('.menu-acco__link').on('click', function (e) {
+        e.preventDefault();
+        const elem = $(e.target),
+            item = elem.closest('.menu-acco__item'),
+            content = item.find('.menu-acco__content'),
+            otherItems = item.siblings(),
+            otherItemsContent = otherItems.find('.menu__description-wrapper'),
+            itemsWidth = $('.menu-acco__item').length * $('.menu-acco__link').width();
+
+        $(window).width() < 769 ?
+            openWidth = $(window).width() - itemsWidth :
+            openWidth = $(window).width() * 0.65 - itemsWidth
+
+        if (!item.hasClass('active')) {
+            otherItems.removeClass('active'),
+                item.addClass('active'),
+                otherItemsContent.css('width', '0'),
+                content.css('width', openWidth)
+        } else {
+            item.removeClass('active'),
+                content.css('width', '0')
+        }
+
+    })
+}
 
 $(document).ready(function () {
     initTeam();
+    initMenu();
     showOwlCarousel();
     showYandexMap();
 
