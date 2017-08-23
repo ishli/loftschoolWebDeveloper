@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Burgers</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
 </head>
 
 <body>
@@ -121,96 +124,247 @@
                 </div>
             </section>
             <section class="section burgers">
-                <div class="container">
-                    <div class="burgers__content">
-                        <div class="content_left">
-                            <div class="burgers__button">
-                                <div class="burgers-box">
-                                    <img src="./img/icons/burger.svg" alt="" class="burgers-box__icon">
+                <div class="owl-carousel owl-theme">
+                    <div class="container">
+                        <div class="burgers__content">
+                            <div class="content_left">
+                                <div class="burgers__button">
+                                    <div class="burgers-box">
+                                        <img src="./img/icons/burger.svg" alt="" class="burgers-box__icon">
 
-                                    <div class="burgers-box__title">Состав</div>
+                                        <div class="burgers-box__title">Состав</div>
+                                    </div>
+                                    <div class="burgers-box__hover">
+                                        <ul class="hover__list">
+                                            <li class="hover__item">
+                                                <img src="./img/icons/beef.svg" alt="" class="hover__icon">
+
+                                                <div class="hover__desc">Говядина</div>
+                                                <div class="hover__amount">300г</div>
+                                            </li>
+                                            <li class="hover__item">
+                                                <img src="./img/icons/buns.svg" alt="" class="hover__icon">
+
+                                                <div class="hover__desc">Булочки</div>
+                                                <div class="hover__amount">100г</div>
+                                            </li>
+                                            <li class="hover__item">
+                                                <img src="./img/icons/salad.svg" alt="" class="hover__icon">
+
+                                                <div class="hover__desc">Зелень</div>
+                                                <div class="hover__amount">70 г</div>
+                                            </li>
+                                            <li class="hover__item">
+                                                <img src="./img/icons/sauce.svg" alt="" class="hover__icon">
+
+                                                <div class="hover__desc">Соус</div>
+                                                <div class="hover__amount">150 г</div>
+                                            </li>
+                                            <li class="hover__item">
+                                                <img src="./img/icons/cucumber.svg" alt="" class="hover__icon">
+
+                                                <div class="hover__desc">Овощи</div>
+                                                <div class="hover__amount">200 г</div>
+                                            </li>
+                                            <li class="hover__item">
+                                                <img src="./img/icons/cheese.svg" alt="" class="hover__icon">
+
+                                                <div class="hover__desc">Сыр</div>
+                                                <div class="hover__amount">80 г</div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="burgers-box__hover">
-                                    <ul class="hover__list">
-                                        <li class="hover__item">
-                                            <img src="./img/icons/beef.svg" alt="" class="hover__icon">
+                                <div class="burger__img">
+                                    <img src="./img/content/black.png" alt="">
+                                </div>
+                                <div class="burger__callories">
+                                    <div class="callories__img">
+                                        <img src="./img/icons/kkal.svg" alt="" class="callories__icon">
 
-                                            <div class="hover__desc">Говядина</div>
-                                            <div class="hover__amount">300г</div>
-                                        </li>
-                                        <li class="hover__item">
-                                            <img src="./img/icons/buns.svg" alt="" class="hover__icon">
-
-                                            <div class="hover__desc">Булочки</div>
-                                            <div class="hover__amount">100г</div>
-                                        </li>
-                                        <li class="hover__item">
-                                            <img src="./img/icons/salad.svg" alt="" class="hover__icon">
-
-                                            <div class="hover__desc">Зелень</div>
-                                            <div class="hover__amount">70 г</div>
-                                        </li>
-                                        <li class="hover__item">
-                                            <img src="./img/icons/sauce.svg" alt="" class="hover__icon">
-
-                                            <div class="hover__desc">Соус</div>
-                                            <div class="hover__amount">150 г</div>
-                                        </li>
-                                        <li class="hover__item">
-                                            <img src="./img/icons/cucumber.svg" alt="" class="hover__icon">
-
-                                            <div class="hover__desc">Овощи</div>
-                                            <div class="hover__amount">200 г</div>
-                                        </li>
-                                        <li class="hover__item">
-                                            <img src="./img/icons/cheese.svg" alt="" class="hover__icon">
-
-                                            <div class="hover__desc">Сыр</div>
-                                            <div class="hover__amount">80 г</div>
-                                        </li>
-                                    </ul>
+                                        <div class="callories__ammount">1200</div>
+                                        <div class="callories__mesure">ккал</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="burger__img">
-                                <img src="./img/content/black.png" alt="">
-                            </div>
-                            <div class="burger__callories">
-                                <div class="callories__img">
-                                    <img src="./img/icons/kkal.svg" alt="" class="callories__icon">
-
-                                    <div class="callories__ammount">1200</div>
-                                    <div class="callories__mesure">ккал</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content_right">
-                            <div class="sectiontitle sectiontitle_white">dark beef burger</div>
-                            <div class="content__desc">
-                                <p>
-                                    Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
-                                    луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-                                </p>
-                                <div class="content__cost">
-                                    <div class="cost__price">500</div>
-                                    <div class="cost__mesure">рублей</div>
-                                    <div class="content__btn">
-                                        <a href="" class="btn">Заказать</a>
+                            <div class="content_right">
+                                <div class="sectiontitle sectiontitle_white">dark beef burger</div>
+                                <div class="content__desc">
+                                    <p>
+                                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                                        луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                    </p>
+                                    <div class="content__cost">
+                                        <div class="cost__price">500</div>
+                                        <div class="cost__mesure">рублей</div>
+                                        <div class="content__btn">
+                                            <a href="" class="btn">Заказать</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="burgers__arrows">
-                        <a href="">
-                                    <img src="./img/icons/arrow-scroll.svg" alt="" class="arrow arrow_left">
-                               
-                            </a>
-                        <a href="">
-                                    <img src="./img/icons/arrow-scroll.svg" alt="" class="arrow arrow_right">
-                              
-                            </a>
-                        </svg>
-                    </div> -->
+                    <div class="container">
+                            <div class="burgers__content">
+                                <div class="content_left">
+                                    <div class="burgers__button">
+                                        <div class="burgers-box">
+                                            <img src="./img/icons/burger.svg" alt="" class="burgers-box__icon">
+    
+                                            <div class="burgers-box__title">Состав</div>
+                                        </div>
+                                        <div class="burgers-box__hover">
+                                            <ul class="hover__list">
+                                                <li class="hover__item">
+                                                    <img src="./img/icons/beef.svg" alt="" class="hover__icon">
+    
+                                                    <div class="hover__desc">Говядина</div>
+                                                    <div class="hover__amount">300г</div>
+                                                </li>
+                                                <li class="hover__item">
+                                                    <img src="./img/icons/buns.svg" alt="" class="hover__icon">
+    
+                                                    <div class="hover__desc">Булочки</div>
+                                                    <div class="hover__amount">100г</div>
+                                                </li>
+                                                <li class="hover__item">
+                                                    <img src="./img/icons/salad.svg" alt="" class="hover__icon">
+    
+                                                    <div class="hover__desc">Зелень</div>
+                                                    <div class="hover__amount">70 г</div>
+                                                </li>
+                                                <li class="hover__item">
+                                                    <img src="./img/icons/sauce.svg" alt="" class="hover__icon">
+    
+                                                    <div class="hover__desc">Соус</div>
+                                                    <div class="hover__amount">150 г</div>
+                                                </li>
+                                                <li class="hover__item">
+                                                    <img src="./img/icons/cucumber.svg" alt="" class="hover__icon">
+    
+                                                    <div class="hover__desc">Овощи</div>
+                                                    <div class="hover__amount">200 г</div>
+                                                </li>
+                                                <li class="hover__item">
+                                                    <img src="./img/icons/cheese.svg" alt="" class="hover__icon">
+    
+                                                    <div class="hover__desc">Сыр</div>
+                                                    <div class="hover__amount">80 г</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="burger__img">
+                                        <img src="./img/content/black.png" alt="">
+                                    </div>
+                                    <div class="burger__callories">
+                                        <div class="callories__img">
+                                            <img src="./img/icons/kkal.svg" alt="" class="callories__icon">
+    
+                                            <div class="callories__ammount">1200</div>
+                                            <div class="callories__mesure">ккал</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_right">
+                                    <div class="sectiontitle sectiontitle_white">dark beef burger</div>
+                                    <div class="content__desc">
+                                        <p>
+                                            Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                                            луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                        </p>
+                                        <div class="content__cost">
+                                            <div class="cost__price">500</div>
+                                            <div class="cost__mesure">рублей</div>
+                                            <div class="content__btn">
+                                                <a href="" class="btn">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                                <div class="burgers__content">
+                                    <div class="content_left">
+                                        <div class="burgers__button">
+                                            <div class="burgers-box">
+                                                <img src="./img/icons/burger.svg" alt="" class="burgers-box__icon">
+        
+                                                <div class="burgers-box__title">Состав</div>
+                                            </div>
+                                            <div class="burgers-box__hover">
+                                                <ul class="hover__list">
+                                                    <li class="hover__item">
+                                                        <img src="./img/icons/beef.svg" alt="" class="hover__icon">
+        
+                                                        <div class="hover__desc">Говядина</div>
+                                                        <div class="hover__amount">300г</div>
+                                                    </li>
+                                                    <li class="hover__item">
+                                                        <img src="./img/icons/buns.svg" alt="" class="hover__icon">
+        
+                                                        <div class="hover__desc">Булочки</div>
+                                                        <div class="hover__amount">100г</div>
+                                                    </li>
+                                                    <li class="hover__item">
+                                                        <img src="./img/icons/salad.svg" alt="" class="hover__icon">
+        
+                                                        <div class="hover__desc">Зелень</div>
+                                                        <div class="hover__amount">70 г</div>
+                                                    </li>
+                                                    <li class="hover__item">
+                                                        <img src="./img/icons/sauce.svg" alt="" class="hover__icon">
+        
+                                                        <div class="hover__desc">Соус</div>
+                                                        <div class="hover__amount">150 г</div>
+                                                    </li>
+                                                    <li class="hover__item">
+                                                        <img src="./img/icons/cucumber.svg" alt="" class="hover__icon">
+        
+                                                        <div class="hover__desc">Овощи</div>
+                                                        <div class="hover__amount">200 г</div>
+                                                    </li>
+                                                    <li class="hover__item">
+                                                        <img src="./img/icons/cheese.svg" alt="" class="hover__icon">
+        
+                                                        <div class="hover__desc">Сыр</div>
+                                                        <div class="hover__amount">80 г</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="burger__img">
+                                            <img src="./img/content/black.png" alt="">
+                                        </div>
+                                        <div class="burger__callories">
+                                            <div class="callories__img">
+                                                <img src="./img/icons/kkal.svg" alt="" class="callories__icon">
+        
+                                                <div class="callories__ammount">1200</div>
+                                                <div class="callories__mesure">ккал</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_right">
+                                        <div class="sectiontitle sectiontitle_white">dark beef burger</div>
+                                        <div class="content__desc">
+                                            <p>
+                                                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                                                луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                            </p>
+                                            <div class="content__cost">
+                                                <div class="cost__price">500</div>
+                                                <div class="cost__mesure">рублей</div>
+                                                <div class="content__btn">
+                                                    <a href="" class="btn">Заказать</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                 </div>
             </section>
             <section class="section team">
@@ -558,6 +712,8 @@
                 </div>
             </section>
             <section class="section map">
+                <div class="map__yandex" id="yandexMap">
+                </div>
             </section>
             <footer class="footer">
                 <div class="container footer__container">
@@ -565,33 +721,28 @@
                         <div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1,15</div>
                         <div class="footer__phone">
                             <img src="./img/icons/phone.svg" alt="" class="footer__phone-icon">
-
-                            <a class="footer__phone-link" href="+7(812)3771377">+7 (812) 377-13-77</a></div>
+                            <a class="footer__phone-link" href="tel:+78123771377">+7 (812) 377-13-77</a></div>
                     </div>
                     <div class="footer__col footer__col_right">
                         <ul class="socials">
                             <li class="socials__item">
                                 <a href="" class="socials__link">
                                                 <img src="./img/icons/vk.svg" alt="" class="socials__link-icon">
-                                           
                                         </a>
                             </li>
                             <li class="socials__item">
                                 <a href="" class="socials__link">
                                                 <img src="./img/icons/fb.svg" alt="" class="socials__link-icon">
-                                           
                                         </a>
                             </li>
                             <li class="socials__item">
                                 <a href="" class="socials__link">
                                                 <img src="./img/icons/inst.svg" alt="" class="socials__link-icon">
-                                           
                                         </a>
                             </li>
                             <li class="socials__item">
                                 <a href="" class="socials__link">
                                                 <img src="./img/icons/twitter.svg" alt="" class="socials__link-icon">
-                                           
                                         </a>
                             </li>
                         </ul>
@@ -626,6 +777,13 @@
             <a class="fixed-menu__link"></a>
         </li>
     </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

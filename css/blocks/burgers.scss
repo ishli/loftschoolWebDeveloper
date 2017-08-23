@@ -46,6 +46,11 @@
     border-radius: rem(5px);
     background-color: rgba(#fef8ec, .9);
     display: none;
+    &:hover{
+        display: block;
+        position: absolute;
+        left: rem(90px);
+    }
 }
 
 .burgers-box {
@@ -189,19 +194,39 @@
     margin-top: rem(40px);
 }
 
-.arrow {
+// .arrow {
+//     width: rem(30px);
+//     height: rem(30px);
+//     &.arrow_left {
+//         position: absolute;
+//         top: 50%;
+//         left: -10%;
+//         transform: rotate(90deg);
+//     }
+//     &.arrow_right {
+//         position: absolute;
+//         top: 50%;
+//         right: -10%;
+//         transform: rotate(-90deg);
+//     }
+// }
+
+.owl-prev, .owl-next {
+    position: absolute;
+    background: url('../img/icons/arrow-scroll.svg') 50% 50% no-repeat !important;
+    background-size: contain;
     width: rem(30px);
-    height: rem(30px);
-    &.arrow_left {
-        position: absolute;
-        top: 50%;
-        left: -10%;
-        transform: rotate(90deg);
-    }
-    &.arrow_right {
-        position: absolute;
-        top: 50%;
-        right: -10%;
-        transform: rotate(-90deg);
-    }
+    height: rem(15px);
+    top: 49%;
+}
+
+.owl-prev {
+    left: 1%;
+    transform: translate(0%,-50%) rotate(90deg);
+}
+
+.owl-next {
+    right: 1%;
+    transform: translate(0%,-50%) rotate(-90deg);
+    
 }
