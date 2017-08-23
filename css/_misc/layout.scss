@@ -20,13 +20,14 @@ body {
     color: $black;
 }
 
-.mainContent{
+.mainContent {
     position: relative;
     width: 100%;
     height: 100%;
     transition: transform 1s ease;
     will-change: transform;
 }
+
 .container {
     margin: 0 auto;
     position: relative;
@@ -90,4 +91,3 @@ footer {
         // height: 125vh;
     }
 }
-
