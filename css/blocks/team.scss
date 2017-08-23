@@ -1,0 +1,161 @@
+.team {
+    background: url("../img/bg/team.png") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    .section-title {
+        margin-bottom: rem(90px);
+    }
+}
+
+.team__section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background: rgba(#2f3234, .93);
+    padding: 8% 2% 0 8%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    @include tablets {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.team__content {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.team-acco {
+    padding-top: rem(50px);
+    @include phones {
+        padding-top: rem(20px);
+    }
+}
+
+.team-acco__item {
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        align-items: center;
+    }
+}
+
+.active {
+    & .team-acco__title {
+        color: $yellow;
+        &:before {
+            transform: rotate(180deg);
+            align-self: flex-start;
+            @include tablets {
+                align-self: center;
+            }
+        }
+    }
+    & .team-acco__content {
+        padding-bottom: rem(20px);
+        display: block;
+        @include tablets {
+            padding-bottom: rem(15px);
+        }
+    }
+}
+
+.team-acco__title {
+    @include gagalin();
+    margin: rem(15px) 0;
+    display: flex;
+    align-items: center;
+    transition: color 0.5s;
+    cursor: pointer;
+    color: $yellow;
+    &:before {
+        content: "";
+        align-self: flex-end;
+        height: 0;
+        width: 0;
+        border-bottom: rem(6px) solid transparent;
+        border-top: rem(6px) solid $yellow;
+        border-right: rem(5px) solid transparent;
+        border-left: rem(5px) solid transparent;
+        margin-right: rem(10px);
+        @include tablets {
+            align-self: center;
+        }
+    }
+    &:hover {
+        color: $yellow;
+    }
+    @include tablets {
+        font-size: rem(24px);
+    }
+}
+
+.team-acco__wrapper {
+    transition: 0.5s;
+    overflow: hidden;
+    height: 0;
+}
+
+.team-acco__content {
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.team-acco__avatar {
+    width: rem(100px);
+    height: rem(100px);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-acco__avatar-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.team-acco__desc {
+    margin-left: rem(20px);
+    width: rem(290px);
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-left: initial;
+    }
+}
+
+.team-acco__desc-occ {
+    font-size: rem(14px);
+    @include ubuntu($style: bold);
+    color: $white;
+    margin-bottom: rem(18px);
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.team-acco__desc-text {
+    font-size: rem(14px);
+    @include ubuntu($style: light);
+    color: $white;
+    flex-wrap: wrap;
+}

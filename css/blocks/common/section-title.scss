@@ -1,0 +1,15 @@
+.sectiontitle {
+    font-size: rem(72px);
+    color: $yellow;
+    @include gagalin();
+    margin-bottom: rem(25px);
+    &_white {
+        color: $white;
+    }
+    @include tablets {
+        font-size: rem(65px);
+    }
+    @include phones {
+        font-size: rem(63.5px);
+    }
+}

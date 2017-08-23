@@ -1,0 +1,95 @@
+.footer {
+    background: url("../img/bg/footer.png") center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: rem(10px) 0;
+    height: rem(60px);
+    @include phones {
+        height: rem(120px);
+    }
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.footer__col {
+    width: 50%;
+    margin-bottom: rem(13px);
+}
+
+.footer__adress {
+    margin-top: rem(13px);
+    color: $white;
+    font-size: rem(14px);
+    @include ubuntu($style: light);
+    @include phones {
+        text-align: center;
+    }
+}
+
+.footer__phone {
+    margin-top: rem(5px);
+    @include phones {
+        text-align: center;
+        margin-bottom: rem(10px);
+    }
+}
+
+.footer__phone-icon {
+    margin-right: rem(10px);
+    width: rem(12px);
+    height: rem(12px);
+}
+
+.footer__phone-link {
+    color: $orange;
+    font-size: rem(14px);
+    @include ubuntu($style: bold);
+    text-decoration: none;
+}
+
+.footer__col_right {
+    text-align: right;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    @include phones {
+        justify-content: center;
+        margin-bottom: rem(10px);
+    }
+}
+
+.socials {
+    position: relative;
+    top: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.socials__item {
+    margin-left: rem(18px);
+}
+
+.socials__link {
+    max-width: rem(23px);
+    max-height: rem(20px);
+    opacity: .3;
+    transition: .3s;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.socials__link-icon {
+    height: rem(20px);
+    width: rem(20px);
+}

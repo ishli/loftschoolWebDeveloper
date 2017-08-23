@@ -1,0 +1,21 @@
+.btn {
+    padding: rem(10px) rem(15px);
+    background: $orange;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: rem(5px);
+    color: $white;
+    display: inline-flex;
+    @include ubuntu($style: medium);
+    font-size: rem(13px);
+    
+    &:hover {
+        background-color: $red;
+    }
+    // &__grey {
+    //     background-color: $black;
+    //     &:hover {
+    //         background-color: #1f2122;
+    //     }
+    // }
+}
