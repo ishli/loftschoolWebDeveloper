@@ -37,78 +37,80 @@
 }
 
 .team-acco {
-    @include tablets {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    padding-top: rem(50px);
+    @include phones {
+        padding-top: rem(20px);
     }
 }
 
 .team-acco__item {
-    margin-bottom: rem(40px);
-    &:last-child {
-        margin-bottom: 0;
-    }
-    &.active {
-        .team-acco__content {
-            height: auto;
-        }
-        .team-acco__title {
-            color: $yellow;
-            &:before {
-                transform: rotate(180deg);
-            }
-        }
-    }
+    display: flex;
+    flex-direction: column;
     @include tablets {
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
 }
 
-.team-acco__content {
-    width: 80%;
-    @include tablets {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+.active {
+    & .team-acco__title {
+        color: $yellow;
+        &:before {
+            transform: rotate(180deg);
+            align-self: flex-start;
+            @include tablets {
+                align-self: center;
+            }
+        }
+    }
+    & .team-acco__content {
+        padding-bottom: rem(20px);
+        display: block;
+        @include tablets {
+            padding-bottom: rem(15px);
+        }
     }
 }
 
 .team-acco__title {
-    font-size: rem(14px);
-    color: $white;
     @include gagalin();
-    text-decoration: none;
-    margin-bottom: rem(20px);
+    margin: rem(15px) 0;
     display: flex;
     align-items: center;
-    position: relative;
+    transition: color 0.5s;
+    cursor: pointer;
+    color: $yellow;
     &:before {
         content: "";
-        width: rem(0px);
-        height: rem(0px);
-        border: rem(9px) solid transparent;
-        border-top-color: $yellow;
-        border-bottom: none;
-        margin-right: 10px;
+        align-self: flex-end;
+        height: 0;
+        width: 0;
+        border-bottom: rem(6px) solid transparent;
+        border-top: rem(6px) solid $yellow;
+        border-right: rem(5px) solid transparent;
+        border-left: rem(5px) solid transparent;
+        margin-right: rem(10px);
+        @include tablets {
+            align-self: center;
+        }
+    }
+    &:hover {
+        color: $yellow;
     }
     @include tablets {
-        font-size: rem(25px);
-    }
-    @include phones {
-        font-size: rem(25px);
+        font-size: rem(24px);
     }
 }
 
-.team-acco__content {
-    display: flex;
+.team-acco__wrapper {
+    transition: 0.5s;
     overflow: hidden;
     height: 0;
+}
+
+.team-acco__content {
+    @include tablets {
+        text-align: center;
+    }
 }
 
 .team-acco__avatar {

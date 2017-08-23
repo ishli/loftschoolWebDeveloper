@@ -69,8 +69,31 @@ const showOwlCarousel = function () {
         loop: true,
         navText: []
     });
-}
+};
+
+const initTeam = function(){
+    $('.team-acco__title').on('click', function (e) {
+        const elem = $(e.target),
+        item = elem.closest('.team-acco__item'),
+        content = item.find('.team-acco__wrapper'),
+        openHeight = item.find('.team-acco__content').outerHeight( true ),
+        otherItems = item.siblings(),
+        otherItemsContent = otherItems.find('.team-acco__wrapper');
+
+        if (item.hasClass('active')) {
+            item.removeClass('active'),
+            content.css('height', '0')
+        } else {
+            otherItems.removeClass('active'),
+            item.addClass('active'),
+            otherItemsContent.css('height', '0'),
+            content.css('height', openHeight)
+        }
+    })
+};
+
 $(document).ready(function () {
+    initTeam();
     showOwlCarousel();
     showYandexMap();
 

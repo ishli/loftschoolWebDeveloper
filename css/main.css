@@ -952,101 +952,87 @@ ul.fixed-menu__list {
         -ms-flex-pack: center;
             justify-content: center; } }
 
-@media screen and (max-width: 768px) {
-  .team-acco {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+.team-acco {
+  padding-top: 3.125rem; }
+  @media screen and (max-width: 480px) {
+    .team-acco {
+      padding-top: 1.25rem; } }
 
 .team-acco__item {
-  margin-bottom: 2.5rem; }
-  .team-acco__item:last-child {
-    margin-bottom: 0; }
-  .team-acco__item.active .team-acco__content {
-    height: auto; }
-  .team-acco__item.active .team-acco__title {
-    color: #f9b43b; }
-    .team-acco__item.active .team-acco__title:before {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg); }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   @media screen and (max-width: 768px) {
     .team-acco__item {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; } }
+              align-items: center; } }
 
-.team-acco__content {
-  width: 80%; }
+.active .team-acco__title {
+  color: #f9b43b; }
+  .active .team-acco__title:before {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -ms-flex-item-align: start;
+        align-self: flex-start; }
+    @media screen and (max-width: 768px) {
+      .active .team-acco__title:before {
+        -ms-flex-item-align: center;
+            align-self: center; } }
+.active .team-acco__content {
+  padding-bottom: 1.25rem;
+  display: block; }
   @media screen and (max-width: 768px) {
-    .team-acco__content {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; } }
+    .active .team-acco__content {
+      padding-bottom: 0.9375rem; } }
 
 .team-acco__title {
-  font-size: 0.875rem;
-  color: #fff;
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
-  text-decoration: none;
-  margin-bottom: 1.25rem;
+  margin: 0.9375rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative; }
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  cursor: pointer;
+  color: #f9b43b; }
   .team-acco__title:before {
     content: "";
-    width: 0rem;
-    height: 0rem;
-    border: 0.5625rem solid transparent;
-    border-top-color: #f9b43b;
-    border-bottom: none;
-    margin-right: 10px; }
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    height: 0;
+    width: 0;
+    border-bottom: 0.375rem solid transparent;
+    border-top: 0.375rem solid #f9b43b;
+    border-right: 0.3125rem solid transparent;
+    border-left: 0.3125rem solid transparent;
+    margin-right: 0.625rem; }
+    @media screen and (max-width: 768px) {
+      .team-acco__title:before {
+        -ms-flex-item-align: center;
+            align-self: center; } }
+  .team-acco__title:hover {
+    color: #f9b43b; }
   @media screen and (max-width: 768px) {
     .team-acco__title {
-      font-size: 1.5625rem; } }
-  @media screen and (max-width: 480px) {
-    .team-acco__title {
-      font-size: 1.5625rem; } }
+      font-size: 1.5rem; } }
 
-.team-acco__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.team-acco__wrapper {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   overflow: hidden;
   height: 0; }
+
+@media screen and (max-width: 768px) {
+  .team-acco__content {
+    text-align: center; } }
 
 .team-acco__avatar {
   width: 6.25rem;
