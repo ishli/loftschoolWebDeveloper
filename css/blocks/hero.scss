@@ -161,25 +161,26 @@
 }
 
 .hero__arrow {
-    position: absolute;
-    display: block;
-    bottom: rem(20px);
-    left: 50%;
-    width: rem(60px);
-    height: rem(60px);
-    transform: translateX(-50%);
-    transition: .3s;
     display: flex;
-    align-items: center;
     justify-content: center;
+    bottom: 15%;
+    border: none;
+    cursor: pointer;
     @include phones {
         bottom: rem(40px);
     }
 }
 
 .arrow__icon {
-    height: rem(40px);
-    width: rem(40px);
+    display: inline-block;
+    position: relative;
+    height: rem(80px);
+    width: rem(80px);
     transition: .3s;
     fill: #fff;
+    transform: scale(0.5) translateX(-50%);
+    transition: all .5s;
+    &:hover {
+        transform: scale(1);
+    }
 }

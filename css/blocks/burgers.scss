@@ -46,7 +46,7 @@
     border-radius: rem(5px);
     background-color: rgba(#fef8ec, .9);
     display: none;
-    &:hover{
+    &:hover {
         display: block;
         position: absolute;
         left: rem(90px);
@@ -194,8 +194,8 @@
     margin-top: rem(40px);
 }
 
-
-.owl-prev, .owl-next {
+.owl-prev,
+.owl-next {
     position: absolute;
     background: url('../img/icons/arrow-scroll.svg') 50% 50% no-repeat !important;
     background-size: contain;
@@ -205,12 +205,11 @@
 }
 
 .owl-prev {
-    left: 1%;
-    transform: translate(0%,-50%) rotate(90deg);
+    left: 2%;
+    transform: translate(0%, -50%) rotate(90deg);
 }
 
 .owl-next {
-    right: 1%;
-    transform: translate(0%,-50%) rotate(-90deg);
-    
+    right: 2%;
+    transform: translate(0%, -50%) rotate(-90deg);
 }

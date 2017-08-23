@@ -768,35 +768,34 @@ ul.fixed-menu__list {
   max-height: 100%; }
 
 .hero__arrow {
-  position: absolute;
-  display: block;
-  bottom: 1.25rem;
-  left: 50%;
-  width: 3.75rem;
-  height: 3.75rem;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  -webkit-transition: .3s;
-  transition: .3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  bottom: 15%;
+  border: none;
+  cursor: pointer; }
   @media screen and (max-width: 480px) {
     .hero__arrow {
       bottom: 2.5rem; } }
 
 .arrow__icon {
-  height: 2.5rem;
-  width: 2.5rem;
+  display: inline-block;
+  position: relative;
+  height: 5rem;
+  width: 5rem;
   -webkit-transition: .3s;
   transition: .3s;
-  fill: #fff; }
+  fill: #fff;
+  -webkit-transform: scale(0.5) translateX(-50%);
+          transform: scale(0.5) translateX(-50%);
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+  .arrow__icon:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
 
 .best {
   background: url("../img/bg/best.png") center center no-repeat;
@@ -1505,7 +1504,8 @@ ul.fixed-menu__list {
 .content__btn {
   margin-top: 2.5rem; }
 
-.owl-prev, .owl-next {
+.owl-prev,
+.owl-next {
   position: absolute;
   background: url("../img/icons/arrow-scroll.svg") 50% 50% no-repeat !important;
   background-size: contain;
@@ -1514,12 +1514,12 @@ ul.fixed-menu__list {
   top: 49%; }
 
 .owl-prev {
-  left: 1%;
+  left: 2%;
   -webkit-transform: translate(0%, -50%) rotate(90deg);
           transform: translate(0%, -50%) rotate(90deg); }
 
 .owl-next {
-  right: 1%;
+  right: 2%;
   -webkit-transform: translate(0%, -50%) rotate(-90deg);
           transform: translate(0%, -50%) rotate(-90deg); }
 
