@@ -435,6 +435,16 @@ body {
   position: relative;
   color: #2f3234; }
 
+.mainContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  will-change: transform; }
+
 .container {
   margin: 0 auto;
   position: relative;
@@ -450,9 +460,8 @@ body {
   height: 100%; }
 
 .wrapper {
-  position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden; }
 
 h1,

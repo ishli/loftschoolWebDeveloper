@@ -1,7 +1,7 @@
-const showYandexMap = function () {
+let showYandexMap = function () {
     let myMap;
 
-    const init = function () {
+    let init = function () {
         myMap = new ymaps.Map("yandexMap", {
             center: [59.92606548, 30.32610869],
             zoom: 11
@@ -61,7 +61,7 @@ const showYandexMap = function () {
     ymaps.ready(init);
 };
 
-const showOwlCarousel = function () {
+let showOwlCarousel = function () {
     $(".owl-carousel").owlCarousel({
         items: 1,
         dots: false,
@@ -71,9 +71,9 @@ const showOwlCarousel = function () {
     });
 };
 
-const initTeam = function () {
+let initTeam = function () {
     $('.team-acco__title').on('click', function (e) {
-        const elem = $(e.target),
+        let elem = $(e.target),
             item = elem.closest('.team-acco__item'),
             content = item.find('.team-acco__wrapper'),
             openHeight = item.find('.team-acco__content').outerHeight(true),
@@ -92,10 +92,10 @@ const initTeam = function () {
     });
 };
 
-const initMenu = function () {
+let initMenu = function () {
     $('.menu-acco__link').on('click', function (e) {
         e.preventDefault();
-        const elem = $(e.target),
+        let elem = $(e.target),
             item = elem.closest('.menu-acco__item'),
             content = item.find('.menu-acco__content'),
             otherItems = item.siblings(),
@@ -117,9 +117,132 @@ const initMenu = function () {
         }
 
     })
-}
+};
+
+let initOnePageScroll = function () {
+    let sections = $('.section'),
+        visible = $('.mainContent');
+    let inScroll = false;
+
+    let md = new MobileDetect(window.navigator.userAgent),
+        isMobile = md.mobile();
+
+    let performTransition = function (sectionEq) {
+        if (!inScroll) {
+            inScroll = true;
+
+            let position = (sectionEq * -100) + '%';
+
+            visible.css({
+                'transform': 'translateY(' + position + ')',
+                '-webkit-transform': 'translateY(' + position + ')'
+            });
+
+            sections.eq(sectionEq).addClass('active')
+                .siblings().removeClass('active');
+
+            setTimeout(function () {
+                inScroll = false;
+                $('.fixed-menu__item').eq(sectionEq).addClass('active')
+                    .siblings().removeClass('active');
+            }, 300);
+        }
+    };
+
+    let defineSections = function (sections) {
+        let activeSection = sections.filter('.active');
+        return {
+            activeSection: activeSection,
+            nextSection: activeSection.next(),
+            prevSection: activeSection.prev()
+        };
+    };
+
+    let scrollToSection = function (direction) {
+        let section = defineSections(sections);
+
+        if (direction == 'up' && section.nextSection.length) {
+            performTransition(section.nextSection.index());
+        }
+
+        if (direction == 'down' && section.prevSection.length) {
+            performTransition(section.prevSection.index());
+        }
+    };
+
+    $('.wrapper').on({
+        'wheel': function (e) {
+            let deltaY = e.originalEvent.deltaY;
+
+            let direction = deltaY > 0 ? 'up' : 'down';
+
+            scrollToSection(direction);
+        },
+        touchmove: function (e) {
+            e.preventDefault();
+        }
+    });
+
+
+    $(document).on('keydown', function (e) {
+        let section = defineSections(sections);
+
+        switch (e.keyCode) {
+            case 38:
+                if (section.prevSection.length) {
+                    performTransition(section.prevSection.index());
+                }
+                break;
+            case 40:
+                if (section.nextSection.length) {
+                    performTransition(section.nextSection.index());
+                }
+                break;
+        }
+    });
+
+    $('.fixed-menu__link').on('click', function (e) {
+        e.preventDefault();
+
+        let elem = $(e.target),
+            items = $('.fixed-menu__item'),
+            targets = elem.closest(items),
+            index = targets.index();
+
+        performTransition(index);
+    });
+
+    $('.nav__link').on('click', function (e) {
+        e.preventDefault();
+
+        let elem = $(e.target),
+            elemId = elem.attr('href'),
+            sectionEq = parseInt(sections.filter(elemId).index());
+
+        performTransition(sectionEq);
+    });
+
+    $('.hero__arrow').on('click', function (e) {
+        e.preventDefault();
+        performTransition(1);
+    });
+
+    $('.order__btn').on('click', function (e) {
+        e.preventDefault();
+        performTransition(6);
+    });
+
+    if (isMobile) {
+        $(window).swipe({
+            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                scrollToSection(direction);
+            }
+        });
+    }
+};
 
 $(document).ready(function () {
+    initOnePageScroll();
     initTeam();
     initMenu();
     showOwlCarousel();
