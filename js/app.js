@@ -67,7 +67,8 @@ let showOwlCarousel = function () {
         dots: false,
         nav: true,
         loop: true,
-        navText: []
+        navText: [],
+        smartSpeed:1000
     });
 };
 
